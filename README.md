@@ -1,2 +1,0 @@
-# DesignPattern
-design pattern
