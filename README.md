@@ -2,6 +2,7 @@
 
 常用设计模式的总结与实现
 
+```
 ├── adapter // 适配器模式
 │   ├── Adapter.java
 │   ├── ChinaPower.java
@@ -87,4 +88,4 @@
     ├── ObserverTest.java
     ├── ProxyTest.java
     └── SingletonTest.java
-
+```
