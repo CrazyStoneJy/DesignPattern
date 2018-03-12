@@ -21,4 +21,9 @@ public class ImageProxy implements Image {
     public void display() {
         realImage.display();
     }
+
+    @Override
+    public boolean test(String name, int a) {
+        return realImage.test(name, a);
+    }
 }

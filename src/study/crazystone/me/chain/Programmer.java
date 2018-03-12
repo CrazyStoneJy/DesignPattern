@@ -1,25 +1,25 @@
 package study.crazystone.me.chain;
 
+import sun.rmi.runtime.Log;
 import utils.Logs;
 
 /**
  * Created by crazystone on 18-3-6.
  */
-public class Leader extends ChargePerson {
+public class Programmer extends ChargePerson {
 
-    public Leader(String name) {
+    public Programmer(String name) {
         super(name);
     }
 
-
     @Override
     protected void dispatchTaskWithMessage() {
-        Logs.l(name + "说:经理想造飞机");
+        Logs.l("我搞不定啊,组长");
     }
 
     @Override
     protected void doSomethingBySelf() {
-        Logs.l(name + ":我貌似可以实现");
+        Logs.l(name + ":我可以实现呦");
     }
 
     @Override

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="br.com.objectos:javapoet:1.1.0" type="repository">
+    <properties maven-id="br.com.objectos:javapoet:1.1.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/br/com/objectos/javapoet/1.1.0/javapoet-1.1.0.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/jre/lib/tools.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

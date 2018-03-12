@@ -20,4 +20,9 @@ public class RealImage implements Image, Foo {
     public void foo() {
         Logs.l("foo");
     }
+
+    @Override
+    public boolean test(String name, int a) {
+        return false;
+    }
 }

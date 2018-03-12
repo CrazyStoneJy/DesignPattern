@@ -1,19 +1,34 @@
 package study.crazystone.me.chain;
 
 /**
- * Created by crazystone on 17-7-13.
+ * Created by crazystone on 18-3-6.
  */
 public class Person {
 
-    protected Person person;
+    protected String name;
+    protected boolean isRoot;
 
-    public Person(){}
-
-    public Person(Person person) {
-        this.person = person;
+    public Person(String name) {
+        this.name = name;
+        this.isRoot = false;
     }
 
-    public boolean dispatchTask() {
-        return false;
+    public Person(String name, boolean isRoot) {
+        this.name = name;
+        this.isRoot = isRoot;
+    }
+
+    public Person setRoot(boolean root) {
+        isRoot = root;
+        return this;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Person setName(String name) {
+        this.name = name;
+        return this;
     }
 }

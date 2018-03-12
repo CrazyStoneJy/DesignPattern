@@ -1,24 +1,21 @@
 package study.crazystone.me.chain;
 
-
-import study.crazystone.me.chain.impl.Boss;
-import study.crazystone.me.chain.impl.GroupLeader;
-import study.crazystone.me.chain.impl.Programmer;
-import study.crazystone.me.chain.impl.ProjectManager;
-
 /**
- * Created by crazystone on 17-7-13.
+ * Created by crazystone on 18-3-6.
  */
 public class ChainTest {
 
     public static void main(String... args) {
-        Person programmer = new Programmer();
-        Leader gl = new GroupLeader(programmer);
-        Leader pm = new ProjectManager(gl);
-        Leader boss = new Boss(pm);
-        boss.dispatchTask();
+        ChargePerson p1 = new Programmer("程序员张三");
+        ChargePerson p2 = new Leader("小组长");
+        ChargePerson p3 = new Manger("经理");
+        ChargePerson p4 = new Boss("老板", true);
+        p4.next(p3);
+        p3.next(p2);
+        p2.next(p1);
+        p4.dispatchTask();
+
 
     }
-
 
 }

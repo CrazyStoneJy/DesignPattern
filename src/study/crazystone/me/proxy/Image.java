@@ -9,5 +9,7 @@ public interface Image {
 
     void display();
 
+    boolean test(String name, int a);
+
 
 }

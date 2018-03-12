@@ -22,6 +22,7 @@ public class ImageHandler implements InvocationHandler {
 //        Logs.l(proxy);
         Logs.l(">>>");
         Object obj = (Object) method.invoke(object, args);
+        Logs.l(args);
         return obj;
     }
 }

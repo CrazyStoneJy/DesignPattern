@@ -5,21 +5,30 @@ import utils.Logs;
 /**
  * Created by crazystone on 18-3-6.
  */
-public class Leader extends ChargePerson {
+public class Boss extends ChargePerson {
 
-    public Leader(String name) {
+    public Boss(String name) {
         super(name);
     }
 
+    public Boss(String name, boolean root) {
+        super(name, root);
+    }
+
+    @Override
+    public void dispatchTask() {
+        Logs.l(name + "说:我想造个飞机");
+        super.dispatchTask();
+    }
 
     @Override
     protected void dispatchTaskWithMessage() {
-        Logs.l(name + "说:经理想造飞机");
+
     }
 
     @Override
     protected void doSomethingBySelf() {
-        Logs.l(name + ":我貌似可以实现");
+        Logs.l(name + ":我自己做了???");
     }
 
     @Override

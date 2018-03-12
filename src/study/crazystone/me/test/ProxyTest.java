@@ -6,7 +6,6 @@ import utils.Logs;
 import java.lang.reflect.Proxy;
 
 /**
- *
  * Created by crazystone on 18-2-9.
  */
 public class ProxyTest {
@@ -31,6 +30,11 @@ public class ProxyTest {
 //            method.setAccessible(true);
 //            Object obj = method.invoke(realImage);
             Image image = (Image) Proxy.newProxyInstance(imageClass.getClassLoader(), imageClass.getInterfaces(), (obj, method, args) -> {
+                if (args != null) {
+                    for (Object arg : args) {
+                        Logs.l(arg.toString());
+                    }
+                }
                 if (method.getName().equals("load")) {
                     Logs.l("load from net");
                 } else {
@@ -41,6 +45,7 @@ public class ProxyTest {
             });
             image.load();
             image.display();
+            image.test("a", 1);
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
