@@ -19,7 +19,6 @@ public abstract class ChargePerson extends Person implements ITask {
     public void dispatchTask() {
         if (!isRoot && intercept()) {
             doSomethingBySelf();
-            return;
         } else {
             dispatchTaskWithMessage();
             if (next != null) {

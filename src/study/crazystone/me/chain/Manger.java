@@ -12,13 +12,6 @@ public class Manger extends ChargePerson {
     public Manger(String name) {
         super(name);
     }
-//
-//
-//    @Override
-//    public void dispatchTask() {
-//        super.dispatchTask();
-//
-//    }
 
     @Override
     protected void dispatchTaskWithMessage() {

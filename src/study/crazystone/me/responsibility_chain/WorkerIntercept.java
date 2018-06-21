@@ -5,11 +5,12 @@ import utils.Logs;
 /**
  * Created by crazystone on 17-11-29.
  */
-public class LeaderIntercept implements Interceptor {
+public class WorkerIntercept implements Interceptor {
     @Override
     public String intercept(Chain chain) {
-        Logs.l("leader do");
-        String string = "leader->" + chain.process();
+
+        Logs.l("worker do");
+        String string = "work>" + chain.process();
         return string;
     }
 }

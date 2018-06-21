@@ -13,11 +13,10 @@ public class TestInterceptor {
 
     public static void main(String... args) {
         List<Interceptor> interceptors = new ArrayList<>();
-        interceptors.add(new WorkIntercept());
+        interceptors.add(new WorkerIntercept());
         interceptors.add(new LeaderIntercept());
         interceptors.add(new BossIntercept());
 
-//        interceptors.clear();
         Interceptor.Chain chain = new HandleChain(0, interceptors);
         String message = chain.process();
         System.out.println(message);

@@ -21,7 +21,7 @@ public class HandleChain implements Interceptor.Chain {
             Interceptor interceptor = interceptors.get(index);
             Interceptor.Chain chain = new HandleChain(index + 1, interceptors);
             String message = interceptor.intercept(chain);
-//            System.out.println(message);
+            System.out.println(message);
             return message;
         }
         return "finished";
